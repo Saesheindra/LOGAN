@@ -148,6 +148,12 @@
   h2 em{font-style:italic;color:var(--accent);}
   .sec-head p{margin-top:20px;color:var(--ink-soft);font-size:18px;line-height:1.62;}
 
+  /* ---------- About Stats ---------- */
+  .about-stats{display:flex;gap:clamp(30px,5vw,60px);flex-wrap:wrap;margin-bottom:50px;padding:30px 0;border-bottom:1px solid var(--line);}
+  .about-stats div{text-align:left;}
+  .about-stats b{display:block;color:var(--accent);font-size:clamp(32px,5vw,48px);font-family:"Fraunces",serif;font-weight:500;margin-bottom:6px;letter-spacing:-0.02em;}
+  .about-stats span{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+
   /* ---------- About / quote ---------- */
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start;}
   @media(max-width:820px){.about-grid{grid-template-columns:1fr;}}
@@ -427,12 +433,7 @@
         <a href="https://wa.me/60102227924" target="_blank" class="btn btn-solid liquid-glass" style="background:#fff;color:#000;">Enquire now →</a>
         <a href="#services" class="btn btn-glass liquid-glass">Our services</a>
       </div>
-      <div class="hero-meta fade-in" data-delay="1400">
-        <div><b>14+</b>Years field experience</div>
-        <div><b>13</b>States covered</div>
-        <div><b>9</b>Survey disciplines</div>
       </div>
-    </div>
 
     <div class="hero-tag fade-in" data-delay="1600">
       <div class="hero-tag-inner liquid-glass">
@@ -456,6 +457,11 @@
     <div class="sec-head reveal">
       <div class="eyebrow">About LOGAN</div>
       <h2>Data that must be measured once and <em>trusted for decades.</em></h2>
+    </div>
+    <div class="about-stats reveal">
+      <div><b>14+</b><span>Years field experience</span></div>
+      <div><b>13</b><span>States covered</span></div>
+      <div><b>9</b><span>Survey disciplines</span></div>
     </div>
     <div class="about-grid">
       <div class="reveal">
