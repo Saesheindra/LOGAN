@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LOGAN Website - Design Brief Checklist</title>
+<style>
+  @page { margin: 1in; size: A4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .header {
+    border-bottom: 3px solid #c2410c;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+  .logo {
+    font-size: 28pt;
+    font-weight: 700;
+    color: #c2410c;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    font-size: 14pt;
+    color: #666;
+    margin-top: 5px;
+  }
+  .meta {
+    margin-top: 15px;
+    font-size: 10pt;
+    color: #888;
+  }
+  h2 {
+    font-size: 14pt;
+    color: #16150f;
+    margin: 25px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .checklist {
+    list-style: none;
+  }
+  .checklist li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .checklist li:last-child {
+    border-bottom: none;
+  }
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c2410c;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c2410c;
+    font-weight: bold;
+    font-size: 12pt;
+  }
+  .checkbox.checked::after {
+    content: "✓";
+  }
+  .item-content {
+    flex: 1;
+  }
+  .item-title {
+    font-weight: 600;
+    color: #16150f;
+  }
+  .item-detail {
+    font-size: 10pt;
+    color: #666;
+    margin-top: 3px;
+  }
+  .status {
+    font-size: 9pt;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .status.complete {
+    background: #dcfce7;
+    color: #166534;
+  }
+  .section-num {
+    font-family: 'Courier New', monospace;
+    font-size: 9pt;
+    color: #c2410c;
+    margin-right: 8px;
+  }
+  .summary-box {
+    background: #fef3e7;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .summary-box h3 {
+    color: #c2410c;
+    font-size: 12pt;
+    margin-bottom: 10px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .summary-item {
+    text-align: center;
+  }
+  .summary-num {
+    font-size: 24pt;
+    font-weight: 700;
+    color: #c2410c;
+  }
+  .summary-label {
+    font-size: 9pt;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 9pt;
+    color: #888;
+    text-align: center;
+  }
+  @media print {
+    body { padding: 0; }
+    .checklist li { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">LOGAN</div>
+  <div class="subtitle">Landing Page Design Brief - Implementation Checklist</div>
+  <div class="meta">
+    <strong>Project:</strong> logan-survey.vercel.app &nbsp;&nbsp;|&nbsp;&nbsp;
+    <strong>Date:</strong> 12 July 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
+    <strong>Status:</strong> Completed
+  </div>
+</div>
+
+<h2>Section 1: Hero Updates</h2>
+<ul class="checklist">
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title">Update hero tagline</div>
+      <div class="item-detail">"Cadastral · Engineering · Geodetic" → "Accurate · Reliable · Professional"</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title">Update survey disciplines count</div>
+      <div class="item-detail">Changed from "9 Survey disciplines" to "10 Survey disciplines"</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title">Update marquee strip</div>
+      <div class="item-detail">Added "LiDAR" to scrolling service ticker</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+</ul>
+
+<h2>Section 6: Services Updates</h2>
+<ul class="checklist">
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">01</span> Cadastral Survey</div>
+      <div class="item-detail">Accurate boundary surveying for land subdivision, amalgamation, title applications and dispute resolution in compliance with land authority standards.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">02</span> Engineering Survey</div>
+      <div class="item-detail">Precise spatial data for construction setting out, infrastructure alignment, earthwork surveys, deformation monitoring and as-built documentation.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">03</span> Airborne Survey</div>
+      <div class="item-detail">Drone photogrammetry for large area mapping, orthophoto generation, terrain analysis, progress monitoring and volume calculations.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">04</span> LiDAR Survey <span style="color:#c2410c;font-weight:600;">(NEW)</span></div>
+      <div class="item-detail">High-accuracy 3D laser scanning for terrain modelling, corridor mapping, asset inspection and complex environment surveys.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">05</span> Geodetic Survey</div>
+      <div class="item-detail">Control network establishment, GNSS surveys, datum transfer, benchmark verification and precise positioning systems.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">06</span> Hydrographic Survey</div>
+      <div class="item-detail">Bathymetric surveys, river and reservoir mapping, coastal profiling and marine engineering support for water resource projects.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">07</span> Terrestrial Survey</div>
+      <div class="item-detail">Ground-based topographical surveys, detail surveys, control establishment and utility mapping using total stations and GNSS.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">08</span> Underground Utility Survey</div>
+      <div class="item-detail">GPR and electromagnetic detection for utility mapping, subsurface investigation and infrastructure risk assessment.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">09</span> Building Information Modelling (BIM)</div>
+      <div class="item-detail">3D modelling, clash detection, as-built documentation and construction coordination through integrated survey data.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+  <li>
+    <div class="checkbox checked"></div>
+    <div class="item-content">
+      <div class="item-title"><span class="section-num">10</span> Geographic Information System (GIS)</div>
+      <div class="item-detail">Spatial analysis, asset management, geospatial database development and mapping solutions for data-driven planning.</div>
+    </div>
+    <span class="status complete">Complete</span>
+  </li>
+</ul>
+
+<div class="summary-box">
+  <h3>Implementation Summary</h3>
+  <div class="summary-grid">
+    <div class="summary-item">
+      <div class="summary-num">13</div>
+      <div class="summary-label">Total Changes</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num">13</div>
+      <div class="summary-label">Completed</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num">1</div>
+      <div class="summary-label">New Service Added</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-num">10</div>
+      <div class="summary-label">Total Services</div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <strong>LOGAN</strong> · Land-Oriented Geomatics Analysis Network<br>
+  Deployed: https://logan-survey.vercel.app
+</div>
+
+</body>
+</html>
