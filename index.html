@@ -128,6 +128,19 @@
   .strip .track span::after{content:"✦";color:var(--accent);}
   @keyframes scroll{to{transform:translateX(-50%);}}
 
+  /* ---------- Clients Strip ---------- */
+  .clients-section{background:var(--dark);padding:clamp(50px,6vw,80px) 0;overflow:hidden;}
+  .clients-section .eyebrow{color:var(--accent-soft);text-align:center;justify-content:center;margin-bottom:30px;}
+  .clients-section .eyebrow::before{display:none;}
+  .clients-section h3{color:var(--paper);font-family:"Fraunces",serif;font-size:clamp(24px,3vw,36px);text-align:center;margin-bottom:40px;}
+  .clients-track{display:flex;gap:60px;animation:scrollClients 25s linear infinite;width:max-content;}
+  .clients-track:hover{animation-play-state:paused;}
+  .client-logo{display:flex;align-items:center;justify-content:center;height:70px;padding:0 20px;filter:brightness(0) invert(1);opacity:0.7;transition:opacity 0.3s,transform 0.3s;}
+  .client-logo:hover{opacity:1;transform:scale(1.05);}
+  .client-logo img{height:50px;width:auto;max-width:160px;object-fit:contain;}
+  .client-logo span{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--paper);white-space:nowrap;}
+  @keyframes scrollClients{to{transform:translateX(-50%);}}
+
   /* ---------- Section base ---------- */
   section{padding:clamp(70px,9vw,120px) 0;}
   .sec-head{max-width:680px;margin-bottom:56px;}
@@ -701,6 +714,31 @@
     </div>
   </div>
 </section>
+
+<!-- CLIENTS -->
+<div class="clients-section">
+  <div class="eyebrow">Trusted By</div>
+  <h3>Work with industry leaders</h3>
+  <div style="overflow:hidden;">
+    <div class="clients-track">
+      <div class="client-logo"><img src="logo/DBKL.jpg" alt="DBKL"></div>
+      <div class="client-logo"><img src="logo/JKR.png" alt="JKR"></div>
+      <div class="client-logo"><img src="logo/syabas-logo.png" alt="Syabas"></div>
+      <div class="client-logo"><img src="logo/Genting.webp" alt="Genting Highlands"></div>
+      <div class="client-logo"><span>iDEAL Survey Consultants</span></div>
+      <div class="client-logo"><span>Perunding Ukur Suria</span></div>
+      <div class="client-logo"><img src="logo/JPS.png" alt="JPS Malaysia"></div>
+      <!-- Duplicate for seamless scroll -->
+      <div class="client-logo"><img src="logo/DBKL.jpg" alt="DBKL"></div>
+      <div class="client-logo"><img src="logo/JKR.png" alt="JKR"></div>
+      <div class="client-logo"><img src="logo/syabas-logo.png" alt="Syabas"></div>
+      <div class="client-logo"><img src="logo/Genting.webp" alt="Genting Highlands"></div>
+      <div class="client-logo"><span>iDEAL Survey Consultants</span></div>
+      <div class="client-logo"><span>Perunding Ukur Suria</span></div>
+      <div class="client-logo"><img src="logo/JPS.png" alt="JPS Malaysia"></div>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap foot">
