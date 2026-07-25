@@ -395,6 +395,15 @@
     #cur,#morph{display:none!important;}
   }
 
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;z-index:9999;background:rgba(22,21,15,.95);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;cursor:zoom-out;}
+  .lightbox.active{opacity:1;visibility:visible;}
+  .lightbox img{max-width:90%;max-height:90vh;object-fit:contain;border-radius:3px;box-shadow:0 20px 60px rgba(0,0,0,.5);transform:scale(.95);transition:transform .3s;}
+  .lightbox.active img{transform:scale(1);}
+  .lightbox-close{position:absolute;top:24px;right:28px;font-size:32px;color:#f4f2ec;cursor:pointer;opacity:.7;transition:opacity .2s;}
+  .lightbox-close:hover{opacity:1;}
+  .svc-img{cursor:zoom-in;}
+
 </style>
 </head>
 <body>
@@ -1096,6 +1105,37 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(
       btn.classList.toggle('unmuted', !video.muted);
     });
   }
+})();
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Enlarged service image">
+</div>
+<script>
+(function(){
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  document.querySelectorAll('.svc-img img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lightbox.addEventListener('click', closeLightbox);
+  closeBtn.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
 })();
 </script>
 </body>
