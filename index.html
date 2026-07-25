@@ -402,7 +402,7 @@
   .lightbox.active img{transform:scale(1);}
   .lightbox-close{position:absolute;top:24px;right:28px;font-size:32px;color:#f4f2ec;cursor:pointer;opacity:.7;transition:opacity .2s;}
   .lightbox-close:hover{opacity:1;}
-  .svc-img{cursor:zoom-in;}
+  .svc-img,.about-fig{cursor:zoom-in;}
 
 </style>
 </head>
@@ -1119,7 +1119,7 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(
   const lightboxImg = lightbox.querySelector('img');
   const closeBtn = lightbox.querySelector('.lightbox-close');
 
-  document.querySelectorAll('.svc-img img').forEach(img => {
+  document.querySelectorAll('.svc-img img, .about-fig img').forEach(img => {
     img.addEventListener('click', () => {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
