@@ -308,7 +308,8 @@
   .ph .tick.tl{top:10px;left:10px;border-right:0;border-bottom:0;}
   .ph .tick.br{bottom:10px;right:10px;border-left:0;border-top:0;}
 
-  .about-fig{margin-top:28px;height:230px;}
+  .about-fig{margin-top:28px;height:auto;aspect-ratio:16/9;}
+  .about-fig img{object-fit:contain !important;background:#16150f;}
 
   /* full-bleed parallax band */
   .band{position:relative;height:clamp(300px,42vw,460px);overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
